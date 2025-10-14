@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: “*/5 * * * *"   # every 5 minutes (UTC); adjust as needed
+    - cron: "*/5 * * * *"   # every 5 minutes (UTC); adjust as needed
   workflow_dispatch: {}       # allow manual runs
 
 permissions:
