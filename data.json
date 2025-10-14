@@ -27,6 +27,13 @@
       "location": "Amphoteatre Marconi",
       "description": "Screening of Casino Royale in the Grand Ballroom, with popcorn, drinks, and a glamorous Bond atmosphere.",
       "slug": "casino-royal-watching"
+    },
+    {
+      "title": "Test",
+      "date-yyyy-mm-dd-hh-mm-": "Test",
+      "location": "Test",
+      "description": "Test",
+      "slug": "test"
     }
   ]
 }
