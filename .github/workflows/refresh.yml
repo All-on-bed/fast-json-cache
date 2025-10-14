@@ -1,0 +1,52 @@
+name: Refresh JSON from Apps Script
+
+on:
+  schedule:
+    - cron: "*/1 * * * *"   # every 30 minutes (UTC); adjust as needed
+  workflow_dispatch: {}       # allow manual runs
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-json
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch upstream JSON
+        run: |
+          set -euo pipefail
+          curl -fsSL "https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLhh1r78JrUd93cX26iZRlkTw-VXjIgZwmVlrbvLcgk0i8AcCewmsoa3IWK8eB-_E3tiYv4UnPLHmD_D438n0kXSCU6UUOvkyU6d1lz09ch9hSQ9rcVYFKRF7fsNRtA-Whh5JQ-algrla2A-1f-zDlIcbGUUq4QbGAfVIUTdTTtG2etKFWzuiqgi2vI49NCvHnsAxmIkD77-mPeo8sNWYvFIhkGoHaep9UWELf9Ki3dnn0wJsGiigJHj9klDtRb16QAnrqGIx3mbFuW3jj1NN1-cxtlkhA&lib=MqWI2eNabQZJZJ4CRdba0s_OWijhebUwr" -o new.json
+          # optional: prettify for clean diffs (remove if you prefer raw)
+          if command -v jq >/dev/null 2>&1; then
+            jq . new.json > new.pretty.json && mv new.pretty.json new.json
+          fi
+
+      - name: Replace data.json if changed
+        run: |
+          set -euo pipefail
+          if [ ! -f data.json ]; then
+            cp new.json data.json
+            echo "No prior file; creating."
+          else
+            if cmp -s new.json data.json; then
+              echo "No change; exiting."
+              exit 0
+            else
+              mv new.json data.json
+              echo "Updated data.json"
+            fi
+          fi
+
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git commit -m "chore: refresh data.json [skip ci]" || exit 0
+          git push
