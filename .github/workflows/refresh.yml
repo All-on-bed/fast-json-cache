@@ -30,7 +30,7 @@ jobs:
             URL="https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLhh1r78JrUd93cX26iZRlkTw-VXjIgZwmVlrbvLcgk0i8AcCewmsoa3IWK8eB-_E3tiYv4UnPLHmD_D438n0kXSCU6UUOvkyU6d1lz09ch9hSQ9rcVYFKRF7fsNRtA-Whh5JQ-algrla2A-1f-zDlIcbGUUq4QbGAfVIUTdTTtG2etKFWzuiqgi2vI49NCvHnsAxmIkD77-mPeo8sNWYvFIhkGoHaep9UWELf9Ki3dnn0wJsGiigJHj9klDtRb16QAnrqGIx3mbFuW3jj1NN1-cxtlkhA&lib=MqWI2eNabQZJZJ4CRdba0s_OWijhebUwr&t=$TS"
 
             # Run curl safely — never fail entire job if this fails
-            if ! curl -fsSL -L --max-time 15 --retry 2 --retry-delay 1 "$URL" -o new.json
+            if ! curl -fsSL -L --max-time 15 --retry 2 --retry-delay 1 "$URL" -o new.json; then
               echo "⚠️  curl failed on iteration $i — skipping this tick"
               sleep 15
               continue
