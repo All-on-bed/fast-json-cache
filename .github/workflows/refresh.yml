@@ -15,7 +15,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 6       # ~5 min loop + buffer
+    timeout-minutes: 20      # ~5 min loop + buffer
 
     steps:
       - uses: actions/checkout@v4
@@ -24,7 +24,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          for i in $(seq 1 19); do
+          for i in $(seq 1 80); do
             echo "---- Iteration $i ----"
             TS=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
             URL="https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLhh1r78JrUd93cX26iZRlkTw-VXjIgZwmVlrbvLcgk0i8AcCewmsoa3IWK8eB-_E3tiYv4UnPLHmD_D438n0kXSCU6UUOvkyU6d1lz09ch9hSQ9rcVYFKRF7fsNRtA-Whh5JQ-algrla2A-1f-zDlIcbGUUq4QbGAfVIUTdTTtG2etKFWzuiqgi2vI49NCvHnsAxmIkD77-mPeo8sNWYvFIhkGoHaep9UWELf9Ki3dnn0wJsGiigJHj9klDtRb16QAnrqGIx3mbFuW3jj1NN1-cxtlkhA&lib=MqWI2eNabQZJZJ4CRdba0s_OWijhebUwr&t=$TS"
