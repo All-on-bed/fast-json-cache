@@ -28,4 +28,33 @@ jobs:
             TS=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 
             # Fetch (cache-busted) with light retries
-            URL="https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLhh1r78JrUd93cX26iZRlkTw-VXjIgZwmVlrbvLcgk0i8AcCewmsoa3IWK8eB-_E3tiYv4UnPLHmD_D438n0kXSCU6UUOvkyU6d1lz09ch9hSQ9rcVYFKRF7fsNRtA-Whh5JQ-algrla2A-1f-zDlIcbGUUq4QbGAfVIUTdTTtG2etKFWzuiqgi2vI49NCvHnsAxmIkD77-mPeo8sNWYvFIhkGoHaep9UWELf9Ki3dnn0wJsGiigJHj9klDtRb16QAnrqGIx3mbFuW3jj1NN1-cxtlkhA&lib
+            URL="https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLhh1r78JrUd93cX26iZRlkTw-VXjIgZwmVlrbvLcgk0i8AcCewmsoa3IWK8eB-_E3tiYv4UnPLHmD_D438n0kXSCU6UUOvkyU6d1lz09ch9hSQ9rcVYFKRF7fsNRtA-Whh5JQ-algrla2A-1f-zDlIcbGUUq4QbGAfVIUTdTTtG2etKFWzuiqgi2vI49NCvHnsAxmIkD77-mPeo8sNWYvFIhkGoHaep9UWELf9Ki3dnn0wJsGiigJHj9klDtRb16QAnrqGIx3mbFuW3jj1NN1-cxtlkhA&lib=MqWI2eNabQZJZJ4CRdba0s_OWijhebUwr&t=$TS"
+            curl -fsSL --retry 2 --retry-delay 1 --retry-connrefused --max-time 10 \
+                 -H 'Cache-Control: no-cache' "$URL" -o new.json
+
+            # Validate/pretty-print if jq is present
+            if command -v jq >/dev/null 2>&1; then
+              jq -e . new.json > new.pretty.json && mv new.pretty.json new.json
+            else
+              [ -s new.json ] || { echo "Downloaded file is empty"; exit 1; }
+            fi
+
+            # Replace if changed and commit
+            if [ ! -f data.json ] || ! cmp -s new.json data.json; then
+              mv new.json data.json
+              echo "Updated data.json"
+              git config user.name "github-actions[bot]"
+              git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+              git add data.json
+              git commit -m "chore: refresh data.json (15s tick $i) [skip ci]" || true
+              git push || true
+            else
+              echo "No change."
+            fi
+
+            # Sleep ~15s before next call, with tiny jitter (0–2s) to avoid hard edges
+            if [ "$i" -lt 19 ]; then
+              J=$((RANDOM % 3))
+              sleep $((15 + J))
+            fi
+          done
