@@ -18,15 +18,15 @@
       "title": "SURPRISE EVENT",
       "date-yyyy-mm-dd-hh-mm-": "14/11/2025 21:00",
       "location": "?",
-      "description": "A stylish morning rendezvous in front of EURECOM — enjoy crêpes, fresh juices, and a hint of Casino elegance to start the day.",
+      "description": "The biggest night of the campaign. More details soon, just trust us, you'll want in. :)",
       "slug": "surprise-event"
     },
     {
-      "title": "Casino Royal Watching",
+      "title": "BDE HOTLINE",
       "date-yyyy-mm-dd-hh-mm-": "14/11/2025 21:00:00",
       "location": "Amphoteatre Marconi",
       "description": "Screening of Casino Royale in the Grand Ballroom, with popcorn, drinks, and a glamorous Bond atmosphere.",
-      "slug": "casino-royal-watching"
+      "slug": "bde-hotline"
     }
   ]
 }
