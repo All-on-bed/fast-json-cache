@@ -1,25 +1,32 @@
 {
   "data": [
     {
-      "title": "Crous or Crousty 🍗",
-      "date-yyyy-mm-dd-hh-mm-": "12/12/2025 12:15",
+      "title": "Hot DOUG 🌭",
+      "date-yyyy-mm-dd-hh-mm-": "11/02/2026 12:30",
       "location": "Salsa Room",
-      "description": "Tired of classic CROUS meals? Time to upgrade. All On BED presents Crous or Crousty: same price, way more pleasure.",
-      "slug": "crous-or-crousty-"
+      "description": "Craving something better than your usual campus snacks? Time to level up. The BDE brings you Hot‑Dog Break: same price, way more flavor",
+      "slug": "hot-doug-"
     },
     {
-      "title": "THE VILLAGE PARTY 💃🕺",
-      "date-yyyy-mm-dd-hh-mm-": "13/12/2025 12:30",
-      "location": "The Village - Juan les Pins",
-      "description": "We’re going ALL IN at The Village 💃🕺. One night, one club, one mission: fill the dancefloor until closing.",
-      "slug": "the-village-party-"
+      "title": "Valentine's PARTY 💃🕺",
+      "date-yyyy-mm-dd-hh-mm-": "13/02/2026 22:00",
+      "location": "Poolhouse Cannes : 2 Rue Louis Ardison, 06400 Cannes",
+      "description": "Valentine’s Day in a poolhouse? Say less. The BDE brings you the steamiest night of the year: indoor pool, jacuzzi, DJ — romance upgraded.",
+      "slug": "valentine-s-party-"
     },
     {
-      "title": "SECRET SANTA ",
-      "date-yyyy-mm-dd-hh-mm-": "16/12/2025 17:00",
+      "title": "Chinese New Year afterwork 🧧\r\n\r\n",
+      "date-yyyy-mm-dd-hh-mm-": "18/2/2026 17:00",
       "location": "Salsa Room ",
-      "description": "It’s time for the famous Secret Santa! Join us and enjoy this Christmas moment at EURECOM.",
-      "slug": "secret-santa-"
+      "description": "Ready to spice up your week? The BDE brings you a Lunar New Year Afterwork — same vibe, extra luck.",
+      "slug": "chinese-new-year-afterwork-"
+    },
+    {
+      "title": "Rose sales",
+      "date-yyyy-mm-dd-hh-mm-": "12/2/2026 08:00",
+      "location": "Salsa Room",
+      "description": "“Roses for Valentine’s? The BDE’s got you covered — same price, way more charm.",
+      "slug": "rose-sales"
     }
   ]
 }
