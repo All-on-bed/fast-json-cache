@@ -1,32 +1,18 @@
 {
   "data": [
     {
-      "title": "Hot DOUG 🌭",
-      "date-yyyy-mm-dd-hh-mm-": "11/02/2026 12:30",
-      "location": "Salsa Room",
+      "title": "RDD party",
+      "date-yyyy-mm-dd-hh-mm-": "13/03/2026 23:00",
+      "location": "Honey Club Juan les Pins",
       "description": "Craving something better than your usual campus snacks? Time to level up. The BDE brings you Hot‑Dog Break: same price, way more flavor",
-      "slug": "hot-doug-"
+      "slug": "rdd-party"
     },
     {
-      "title": "Valentine's PARTY 💃🕺",
-      "date-yyyy-mm-dd-hh-mm-": "13/02/2026 22:00",
-      "location": "Poolhouse Cannes : 2 Rue Louis Ardison, 06400 Cannes",
+      "title": "Bowling & Laser Game BDE x BDS",
+      "date-yyyy-mm-dd-hh-mm-": "17/03/2026 18:00",
+      "location": "Laser Game Bowling  Antibes",
       "description": "Valentine’s Day in a poolhouse? Say less. The BDE brings you the steamiest night of the year: indoor pool, jacuzzi, DJ — romance upgraded.",
-      "slug": "valentine-s-party-"
-    },
-    {
-      "title": "Chinese New Year afterwork 🧧\r\n\r\n",
-      "date-yyyy-mm-dd-hh-mm-": "18/2/2026 17:00",
-      "location": "Salsa Room ",
-      "description": "Ready to spice up your week? The BDE brings you a Lunar New Year Afterwork — same vibe, extra luck.",
-      "slug": "chinese-new-year-afterwork-"
-    },
-    {
-      "title": "Rose sales",
-      "date-yyyy-mm-dd-hh-mm-": "12/2/2026 08:00",
-      "location": "Salsa Room",
-      "description": "“Roses for Valentine’s? The BDE’s got you covered — same price, way more charm.",
-      "slug": "rose-sales"
+      "slug": "bowling-laser-game-bde-x-bds"
     }
   ]
 }
