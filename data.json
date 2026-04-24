@@ -13,6 +13,27 @@
       "location": "Laser Game Bowling  Antibes",
       "description": "Sick of the same old study sessions? Time to level up. The BDE brings you Bowling & Laser Game: same squad, way more adrenaline.",
       "slug": "bowling-laser-game-bde-x-bds"
+    },
+    {
+      "title": "Poker Tournament",
+      "date-yyyy-mm-dd-hh-mm-": "27/04/2026 17:00",
+      "location": "",
+      "description": "",
+      "slug": "poker-tournament"
+    },
+    {
+      "title": "Lunch : Galettes Bretonnes",
+      "date-yyyy-mm-dd-hh-mm-": "28/04/2026 12:00",
+      "location": "Eurecom",
+      "description": "Enjoy your lunch! Feels just like Brittany!",
+      "slug": "lunch-galettes-bretonnes"
+    },
+    {
+      "title": "Malta Promo Trip",
+      "date-yyyy-mm-dd-hh-mm-": "30/04/2026 04:00",
+      "location": "Aéroport Nice Côte d’Azur",
+      "description": "Sun, sea, and epic parties: join us for the ultimate student getaway to Malta!",
+      "slug": "malta-promo-trip"
     }
   ]
 }
