@@ -16,10 +16,17 @@
     },
     {
       "title": "Appartathon",
+      "date-yyyy-mm-dd-hh-mm-": "24/04/2026 18:00",
+      "location": "Juan-les-Pins",
+      "description": "Different flats, same crazy energy. Let the Appartathon begin!",
+      "slug": "appartathon"
+    },
+    {
+      "title": "Beach Party",
       "date-yyyy-mm-dd-hh-mm-": "",
       "location": "",
       "description": "",
-      "slug": "appartathon"
+      "slug": "beach-party"
     },
     {
       "title": "Poker Tournament",
