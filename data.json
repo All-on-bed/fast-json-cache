@@ -1,6 +1,20 @@
 {
   "data": [
     {
+      "title": "Love Night - Pool House Party",
+      "date-yyyy-mm-dd-hh-mm-": "13/02/2026 22:00",
+      "location": "The Pool House Cannes",
+      "description": "Looking for Valentine vibes? Make it a Valentine to remember!",
+      "slug": "love-night-pool-house-party"
+    },
+    {
+      "title": "Chinese New Year Afterwork",
+      "date-yyyy-mm-dd-hh-mm-": "18/02/2026 17:00",
+      "location": "Eurecom",
+      "description": "Celebrate the Lunar New Year with us and start 2026 under the sign of prosperity!",
+      "slug": "chinese-new-year-afterwork"
+    },
+    {
       "title": "RDD party",
       "date-yyyy-mm-dd-hh-mm-": "13/03/2026 23:00",
       "location": "Honey Club Juan les Pins",
@@ -29,6 +43,13 @@
       "slug": "blind-test-afterwork"
     },
     {
+      "title": "ROCK IN NICE",
+      "date-yyyy-mm-dd-hh-mm-": "27/03/2026 23:59",
+      "location": "OMA Club Nice",
+      "description": "We're taking over OMA Club for a full night of music, energy and good people.",
+      "slug": "rock-in-nice"
+    },
+    {
       "title": "Egg Hunt",
       "date-yyyy-mm-dd-hh-mm-": "07/04/2026 08:00",
       "location": "Eurecom",
@@ -44,7 +65,7 @@
     },
     {
       "title": "Beach Party",
-      "date-yyyy-mm-dd-hh-mm-": "25/05/2026 16:00",
+      "date-yyyy-mm-dd-hh-mm-": "25/04/2026 16:00",
       "location": "Villa Djunah",
       "description": "Cold drinks, warm sand, and the best crowd. See you at the beach!",
       "slug": "beach-party"
